@@ -15,19 +15,19 @@ int main(){
 
     int balance{}, dollars{}, quarters{}, dimes{}, nickels{}, pennies{};
 
-    dollars = change_amount/dollar_value;
-    balance = change_amount % dollar_value;
+    dollars = change_amount/dollar_value; // dollars = 127 / 100 which is 1
+    balance = change_amount % dollar_value; // balance = 127 % 100 which is 27
 
-    quarters = balance/quarter_value;
-    balance %= quarter_value;
+    quarters = balance/quarter_value; // quarters = 27 / 25 which is 1
+    balance %= quarter_value; // balance = 27 % 25 which nis 2
 
-    dimes = balance/dime_value;
-    balance %= dime_value;
+    dimes = balance/dime_value; // dimes = 2 / 10 which is 0
+    balance %= dime_value; // balance = 2 % 10 (remains the same)
 
-    nickels = balance/nickel_value;
-    balance %= nickel_value;
+    nickels = balance/nickel_value; // dimes = 2 / 5 which is 0
+    balance %= nickel_value; // balance = 2 % 5 (remains the same)
 
-    pennies = balance;
+    pennies = balance; // 2
 
     cout << "Dollars: " << dollars << endl;
     cout << "Quarters: : " << quarters << endl;
